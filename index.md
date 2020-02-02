@@ -1,3 +1,7 @@
+<head>
+  <title>HTML Reference</title>
+</head>
+
 ## Welcome to The Case Study
 
 You can use the [editor on GitHub](https://github.com/vicmanea/casestudy/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
