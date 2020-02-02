@@ -1,4 +1,7 @@
-#Reference Title
+<head>
+  <title>HTML Reference</title>
+</head>
+
 
 ## Welcome to The Case Study
 
