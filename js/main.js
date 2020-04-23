@@ -1,11 +1,4 @@
 
-// function validatePass(){
-
-    
-   
-// }
-
-
 $("#signIn").click(function(){
 
     alert("The button was clicked!");
@@ -19,17 +12,11 @@ $("#signIn").click(function(){
     else if(usernameInput === "admin" && pwInput === "admin")
     {
         alert("Correct information inputted. You will now be redirected to the welcome page.");
-        var url = $(this).data('target');
-        location.replace(url);
+        document.getElementById("loginForm").action = "welcome.html";
+
 
     }
 
 
 })
 
-
-// $('#signIn').on('click', function(event) {
-//     event.preventDefault(); 
-//     var url = $(this).data('target');
-//     location.replace(url);
-// });
