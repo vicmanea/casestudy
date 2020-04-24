@@ -25,13 +25,38 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
 	<script type="text/javascript">
 
-		// For pulse
+		// This checks the thresholds of the pulse and changes colour accordingly
 		$(document).ready(function(){
-			$('#table_id td.y_n').each(function(){
+			$('#table_medihome td.pulse').each(function(){
 				if ($(this).text() < 60) {
-					$(this).css('background-color','#ff0000');
+					$(this).css('background-color','#ff3300');
+				}
+				else if ($(this).text() < 80) {
+					$(this).css('background-color','#339933');
+				}
+				else if ($(this).text() <= 100) {
+					$(this).css('background-color','#ff9900');
+				}
+				else if ($(this).text() > 100) {
+					$(this).css('background-color','#b32400');
 				}
 			});
+
+			$('#table_medihome td.temperature').each(function(){
+				if ($(this).text() < 35) {
+					$(this).css('background-color','#ff3300');
+				}
+				else if ($(this).text() <= 37.5) {
+					$(this).css('background-color','#339933');
+				}
+				else if ($(this).text() <= 38.3) {
+					$(this).css('background-color','#ff9900');
+				}
+				else if ($(this).text() > 38.3) {
+					$(this).css('background-color','#b32400');
+				}
+			});
+
 		});
 
 	</script>
@@ -108,7 +133,7 @@
 				<div class="table100 ver1 m-b-110">
 
 					<!--					The good table -->
-					<table id="table_id" data-vertable="ver1">
+					<table id="table_medihome" data-vertable="ver1">
 						<thead>
 							<tr class="row100 head">
 								<th class="column100 column1" data-column="column1">Name</th>
@@ -137,8 +162,8 @@
 								<td class="column100 column8" data-column="column8">--</td>
 								<td class="column100 column9" data-column="column9">--</td>
 								<td class="column100 column10" data-column="column10">--</td>
-								<td  class="y_n" data-column="column10">70</td>
-								<td class="column100 column12" data-column="column12">--</td>
+								<td class="pulse" data-column="column11">70</td>
+								<td class="temperature" data-column="column12">36</td>
 							</tr>
 
 							<tr class="row100">
@@ -152,8 +177,8 @@
 								<td class="column100 column8" data-column="column8">--</td>
                                 <td class="column100 column9" data-column="column9">--</td>
 								<td class="column100 column10" data-column="column10">--</td>
-								<td  class="y_n" data-column="column10">59</td>
-								<td class="column100 column12" data-column="column12">--</td>
+								<td class="pulse" data-column="column11">59</td>
+								<td class="temperature" data-column="column12">85</td>
 							</tr>
 
 							<tr class="row100">
