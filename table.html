@@ -20,6 +20,23 @@
 	<link rel="stylesheet" type="text/css" href="css/tableutil.css">
 	<link rel="stylesheet" type="text/css" href="css/table.css">
 <!--===============================================================================================-->
+
+<!--	For changing colours of cells-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+	<script type="text/javascript">
+
+		// For pulse
+		$(document).ready(function(){
+			$('#table_id td.y_n').each(function(){
+				if ($(this).text() < 60) {
+					$(this).css('background-color','#ff0000');
+				}
+			});
+		});
+
+	</script>
+
+
 </head>
 <body>
     
@@ -89,7 +106,9 @@
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100 ver1 m-b-110">
-					<table data-vertable="ver1">
+
+					<!--					The good table -->
+					<table id="table_id" data-vertable="ver1">
 						<thead>
 							<tr class="row100 head">
 								<th class="column100 column1" data-column="column1">Name</th>
@@ -118,7 +137,7 @@
 								<td class="column100 column8" data-column="column8">--</td>
 								<td class="column100 column9" data-column="column9">--</td>
 								<td class="column100 column10" data-column="column10">--</td>
-								<td class="column100 column11" data-column="column11">--</td>
+								<td  class="y_n" data-column="column10">70</td>
 								<td class="column100 column12" data-column="column12">--</td>
 							</tr>
 
@@ -133,7 +152,7 @@
 								<td class="column100 column8" data-column="column8">--</td>
                                 <td class="column100 column9" data-column="column9">--</td>
 								<td class="column100 column10" data-column="column10">--</td>
-								<td class="column100 column11" data-column="column11">--</td>
+								<td  class="y_n" data-column="column10">59</td>
 								<td class="column100 column12" data-column="column12">--</td>
 							</tr>
 
