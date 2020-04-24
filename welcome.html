@@ -1,18 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script type="text/javascript" src="passValue.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-<body>
+    <title>Welcome to MedI</title>
 
-<form name="form1" action="welcome.html" method="get">
-    <table>
-        <tr>
-            <td id="here">test</td>
-        </tr>
-    </table>
-</form>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
-</body>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+
+        <h3 class="text-muted">MediHome</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Why MediHome?</h1>
+        <p class="lead">Do personalized alerts regarding critical, patient-inputted data and colour coding data reduce the time physicians spend analyzing data, while simultaneously reducing the risk of error? </p>
+<!--        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>-->
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+            <h4>What is MediHome</h4>
+          <p>MediHome collects data of patients and transmits it directly to their physician so they do not have to commute, and wait in a waiting room full of other sick people only to have their vitals measured. </p>
+            
+          <h4>Goal of this study</h4>
+          <p>The goal of this study is to determine whether or not colour coding medical data would enable physicians to analyze data quicker and make less errors.</p>
+
+          <h4>Your role</h4>
+          <p>Your role is to analyze data on two different dashboards. YOu will have to tell us which patients we need to contact depending on the data they sent their physician that morning.</p>
+
+          
+        </div>
+
+        <div class="col-lg-6">
+            <h4>I am not a physician, how will I be able to interpret data?</h4>
+          <p>In order to make it easier, we will not use actual medical metrics. Instead, we created the following scale:<br>
+            Values between 1-5 = <b>Good </b><br>
+              Values between 6-10 = <b>Concerning, but not life-threatening </b><br>
+              Values between 11 and 15 = <b>We need to contact the patient</b><br>
+            </p>
+          <h4>How to do the survey</h4>
+          <p><ul><li>We will ask you to time yourself while you analyze each dashboard. Please write down all of the names of the patients who need to be contacted and for which vital sign they need to be contacted. <br></li>
+          <li> Restart the timer and do the same for the second dashboard. The second dashboard will be colour coded. <br>(The names and the data will be shuffled, so please do not rely on memory.) <br></li>
+            <li>Then, fill out the survey and submit.</li></ul> </p>
+
+         
+        </div>
+      </div>
+
+      <footer class="footer">
+          <br>
+        <p>Research project for SOEN 357</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
