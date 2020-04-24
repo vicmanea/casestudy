@@ -119,13 +119,13 @@
 		});
         
         function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementsByClassName("limiter").style.marginLeft = "250px";
+            document.getElementById("mySidenav").style.width = "500px";
+            document.getElementById("main").style.marginLeft = "500px";
         }
         
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
-            document.getElementsByClassName("limiter").style.marginLeft = "0";
+            document.getElementById("main").style.marginLeft = "0";
         }
 
 	</script>
@@ -133,28 +133,13 @@
 
 </head>
 <body>
-    
-    <nav class="navbar navbar-default">
-        <div class="topnav">
-            <a href="welcome.html">Welcome</a>
-            <a class="active" href="table.html">Table</a>
-            <a href="badTable.html">Bad Table</a>
-        </div>
-    </nav>
-    
+        
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="welcome.html">Welcome</a>
         <a href="table.html">Table</a>
         <a href="badTable.html">Bad Table</a>
-    </div>
-    
-
-	<div class="limiter">
         
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-        
-        <!--
         <div class="container-legend">
             <div class="legend ver0">
                 <table data-vertable="ver0">
@@ -207,7 +192,12 @@
                 </table>
             </div>
         </div>
--->
+    </div>
+    
+<div id="main">
+	<div class="limiter">
+        
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MEDIHOME</span>
         
 		<div class="container-table100">
 			<div class="wrap-table100">
@@ -887,7 +877,7 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 
 	
 
