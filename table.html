@@ -42,6 +42,7 @@
 				}
 			});
 
+			// This checks the thresholds of the temperature and changes colour accordingly
 			$('#table_medihome td.temperature').each(function(){
 				if ($(this).text() < 35) {
 					$(this).css('background-color','#ff3300');
@@ -53,6 +54,26 @@
 					$(this).css('background-color','#ff9900');
 				}
 				else if ($(this).text() > 38.3) {
+					$(this).css('background-color','#b32400');
+				}
+			});
+
+			// This checks the thresholds of the pressure and changes colour accordingly
+			$('#table_medihome td.pressure').each(function(){
+
+				var str = $(this).text();
+				var res = str.split("\\");
+
+				if (res[0] < 90 && res[1] < 60) {
+					$(this).css('background-color','#ff3300');
+				}
+				else if (res[0] < 120 && res[1] < 80) {
+					$(this).css('background-color','#339933');
+				}
+				else if (res[0] <= 129 && res[1] < 80) {
+					$(this).css('background-color','#ff9900');
+				}
+				else if (res[0] >= 130 && res[1] >= 80) {
 					$(this).css('background-color','#b32400');
 				}
 			});
@@ -161,7 +182,7 @@
 								<td class="column100 column7" data-column="column7">--</td>
 								<td class="column100 column8" data-column="column8">--</td>
 								<td class="column100 column9" data-column="column9">--</td>
-								<td class="column100 column10" data-column="column10">--</td>
+								<td class="pressure" data-column="column10">89/60</td>
 								<td class="pulse" data-column="column11">70</td>
 								<td class="temperature" data-column="column12">36</td>
 							</tr>
