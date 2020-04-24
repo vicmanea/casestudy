@@ -4,10 +4,7 @@ $("#startAnalysis").click(function(){
 //This is to debug
     alert("The button was clicked!");
 
-
-        document.getElementById("welcomePage").action = "badTables.html";
-
-
+        document.getElementById("welcomePage").action = "badTable.html";
 
 })
 
