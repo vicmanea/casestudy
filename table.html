@@ -25,36 +25,42 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
 	<script type="text/javascript">
 
+		// These variables hold the colours of the different threshold levels
+		var colourLowConcerning = '#ff3300';
+		var colourNormal = '#339933';
+		var colourHighConcerning = '#ff9900';
+		var colourAlarming = '#b32400';
+
 		// This checks the thresholds of the pulse and changes colour accordingly
 		$(document).ready(function(){
 			$('#table_medihome td.pulse').each(function(){
 				if ($(this).text() < 60) {
-					$(this).css('background-color','#ff3300');
+					$(this).css('background-color',colourLowConcerning);
 				}
 				else if ($(this).text() < 80) {
-					$(this).css('background-color','#339933');
+					$(this).css('background-color',colourNormal);
 				}
 				else if ($(this).text() <= 100) {
-					$(this).css('background-color','#ff9900');
+					$(this).css('background-color',colourHighConcerning);
 				}
 				else if ($(this).text() > 100) {
-					$(this).css('background-color','#b32400');
+					$(this).css('background-color',colourAlarming);
 				}
 			});
 
 			// This checks the thresholds of the temperature and changes colour accordingly
 			$('#table_medihome td.temperature').each(function(){
 				if ($(this).text() < 35) {
-					$(this).css('background-color','#ff3300');
+					$(this).css('background-color',colourLowConcerning);
 				}
 				else if ($(this).text() <= 37.5) {
-					$(this).css('background-color','#339933');
+					$(this).css('background-color',colourNormal);
 				}
 				else if ($(this).text() <= 38.3) {
-					$(this).css('background-color','#ff9900');
+					$(this).css('background-color',colourHighConcerning);
 				}
 				else if ($(this).text() > 38.3) {
-					$(this).css('background-color','#b32400');
+					$(this).css('background-color',colourAlarming);
 				}
 			});
 
@@ -62,19 +68,51 @@
 			$('#table_medihome td.pressure').each(function(){
 
 				var str = $(this).text();
-				var res = str.split("\\");
+				var res = str.split("/");
 
 				if (res[0] < 90 && res[1] < 60) {
-					$(this).css('background-color','#ff3300');
+					$(this).css('background-color',colourLowConcerning);
 				}
 				else if (res[0] < 120 && res[1] < 80) {
-					$(this).css('background-color','#339933');
+					$(this).css('background-color',colourNormal);
 				}
 				else if (res[0] <= 129 && res[1] < 80) {
-					$(this).css('background-color','#ff9900');
+					$(this).css('background-color',colourHighConcerning);
 				}
 				else if (res[0] >= 130 && res[1] >= 80) {
-					$(this).css('background-color','#b32400');
+					$(this).css('background-color',colourAlarming);
+				}
+			});
+
+			// This checks the thresholds of the BMI and changes colour accordingly
+			$('#table_medihome td.bmi').each(function(){
+				if ($(this).text() < 18.5) {
+					$(this).css('background-color',colourLowConcerning);
+				}
+				else if ($(this).text() <= 24.9) {
+					$(this).css('background-color',colourNormal);
+				}
+				else if ($(this).text() <= 29.9) {
+					$(this).css('background-color',colourHighConcerning);
+				}
+				else if ($(this).text() > 29.9) {
+					$(this).css('background-color',colourAlarming);
+				}
+			});
+
+			// This checks the thresholds of the fasting glucose and changes colour accordingly
+			$('#table_medihome td.glucose').each(function(){
+				if ($(this).text() < 3.9) {
+					$(this).css('background-color',colourLowConcerning);
+				}
+				else if ($(this).text() <= 5.4) {
+					$(this).css('background-color',colourNormal);
+				}
+				else if ($(this).text() <= 6.9) {
+					$(this).css('background-color',colourHighConcerning);
+				}
+				else if ($(this).text() >= 7.0) {
+					$(this).css('background-color',colourAlarming);
 				}
 			});
 
@@ -179,42 +217,42 @@
 								<td class="column100 column4" data-column="column4">--</td>
 								<td class="column100 column5" data-column="column5">--</td>
 								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
+								<td class="bmi" data-column="column7">26</td>
 								<td class="column100 column8" data-column="column8">--</td>
-								<td class="column100 column9" data-column="column9">--</td>
-								<td class="pressure" data-column="column10">89/60</td>
+								<td class="glucose" data-column="column9">4.0</td>
+								<td class="pressure" data-column="column10">122/79</td>
 								<td class="pulse" data-column="column11">70</td>
 								<td class="temperature" data-column="column12">36</td>
 							</tr>
 
 							<tr class="row100">
 								<td class="column100 column1" data-column="column1">Jane Medina</td>
-								<td class="column100 column2" data-column="column2">32</td>
+								<td class="column100 column2" data-column="column2">34</td>
 								<td class="column100 column3" data-column="column3">--</td>
 								<td class="column100 column4" data-column="column4">--</td>
 								<td class="column100 column5" data-column="column5">--</td>
 								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
+								<td class="bmi" data-column="column7">26</td>
 								<td class="column100 column8" data-column="column8">--</td>
-                                <td class="column100 column9" data-column="column9">--</td>
-								<td class="column100 column10" data-column="column10">--</td>
-								<td class="pulse" data-column="column11">59</td>
-								<td class="temperature" data-column="column12">85</td>
+								<td class="glucose" data-column="column9">3.8</td>
+								<td class="pressure" data-column="column10">119/80</td>
+								<td class="pulse" data-column="column11">81</td>
+								<td class="temperature" data-column="column12">35</td>
 							</tr>
 
 							<tr class="row100">
 								<td class="column100 column1" data-column="column1">Billy Mitchell</td>
-								<td class="column100 column2" data-column="column2">47</td>
+								<td class="column100 column2" data-column="column2">39</td>
 								<td class="column100 column3" data-column="column3">--</td>
 								<td class="column100 column4" data-column="column4">--</td>
 								<td class="column100 column5" data-column="column5">--</td>
 								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
+								<td class="bmi" data-column="column7">--</td>
 								<td class="column100 column8" data-column="column8">--</td>
-                                <td class="column100 column9" data-column="column9">--</td>
-								<td class="column100 column10" data-column="column10">--</td>
-								<td class="column100 column11" data-column="column11">--</td>
-								<td class="column100 column12" data-column="column12">--</td>
+								<td class="glucose" data-column="column9">--</td>
+								<td class="pressure" data-column="column10">--</td>
+								<td class="pulse" data-column="column11">--</td>
+								<td class="temperature" data-column="column12">--</td>
 							</tr>
 
 							<tr class="row100">
@@ -224,12 +262,12 @@
 								<td class="column100 column4" data-column="column4">--</td>
 								<td class="column100 column5" data-column="column5">--</td>
 								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
+								<td class="bmi" data-column="column7">--</td>
 								<td class="column100 column8" data-column="column8">--</td>
-                                <td class="column100 column9" data-column="column9">--</td>
-								<td class="column100 column10" data-column="column10">--</td>
-								<td class="column100 column11" data-column="column11">--</td>
-								<td class="column100 column12" data-column="column12">--</td>
+								<td class="glucose" data-column="column9">--</td>
+								<td class="pressure" data-column="column10">--</td>
+								<td class="pulse" data-column="column11">--</td>
+								<td class="temperature" data-column="column12">--</td>
 							</tr>
 
 							<tr class="row100">
@@ -239,12 +277,12 @@
 								<td class="column100 column4" data-column="column4">--</td>
 								<td class="column100 column5" data-column="column5">--</td>
 								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
+								<td class="bmi" data-column="column7">--</td>
 								<td class="column100 column8" data-column="column8">--</td>
-                                <td class="column100 column9" data-column="column9">--</td>
-								<td class="column100 column10" data-column="column10">--</td>
-								<td class="column100 column11" data-column="column11">--</td>
-								<td class="column100 column12" data-column="column12">--</td>
+								<td class="glucose" data-column="column9">--</td>
+								<td class="pressure" data-column="column10">--</td>
+								<td class="pulse" data-column="column11">--</td>
+								<td class="temperature" data-column="column12">--</td>
 							</tr>
 
 							<tr class="row100">
@@ -254,12 +292,12 @@
 								<td class="column100 column4" data-column="column4">--</td>
 								<td class="column100 column5" data-column="column5">--</td>
 								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
+								<td class="bmi" data-column="column7">--</td>
 								<td class="column100 column8" data-column="column8">--</td>
-                                <td class="column100 column9" data-column="column9">--</td>
-								<td class="column100 column10" data-column="column10">--</td>
-								<td class="column100 column11" data-column="column11">--</td>
-								<td class="column100 column12" data-column="column12">--</td>
+								<td class="glucose" data-column="column9">--</td>
+								<td class="pressure" data-column="column10">--</td>
+								<td class="pulse" data-column="column11">--</td>
+								<td class="temperature" data-column="column12">--</td>
 							</tr>
 
 							<tr class="row100">
@@ -269,12 +307,12 @@
 								<td class="column100 column4" data-column="column4">--</td>
 								<td class="column100 column5" data-column="column5">--</td>
 								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
+								<td class="bmi" data-column="column7">--</td>
 								<td class="column100 column8" data-column="column8">--</td>
-                                <td class="column100 column9" data-column="column9">--</td>
-								<td class="column100 column10" data-column="column10">--</td>
-								<td class="column100 column11" data-column="column11">--</td>
-								<td class="column100 column12" data-column="column12">--</td>
+								<td class="glucose" data-column="column9">--</td>
+								<td class="pressure" data-column="column10">--</td>
+								<td class="pulse" data-column="column11">--</td>
+								<td class="temperature" data-column="column12">--</td>
 							</tr>
 
 							<tr class="row100">
@@ -284,12 +322,12 @@
 								<td class="column100 column4" data-column="column4">--</td>
 								<td class="column100 column5" data-column="column5">--</td>
 								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
+								<td class="bmi" data-column="column7">--</td>
 								<td class="column100 column8" data-column="column8">--</td>
-                                <td class="column100 column9" data-column="column9">--</td>
-								<td class="column100 column10" data-column="column10">--</td>
-								<td class="column100 column11" data-column="column11">--</td>
-								<td class="column100 column12" data-column="column12">--</td>
+								<td class="glucose" data-column="column9">--</td>
+								<td class="pressure" data-column="column10">--</td>
+								<td class="pulse" data-column="column11">--</td>
+								<td class="temperature" data-column="column12">--</td>
 							</tr>
 						</tbody>
 					</table>
