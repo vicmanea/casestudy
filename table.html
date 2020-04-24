@@ -117,6 +117,16 @@
 			});
 
 		});
+        
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementsByClassName("limiter").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementsByClassName("limiter").style.marginLeft = "0";
+        }
 
 	</script>
 
@@ -131,9 +141,20 @@
             <a href="badTable.html">Bad Table</a>
         </div>
     </nav>
-        
+    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="welcome.html">Welcome</a>
+        <a href="table.html">Table</a>
+        <a href="badTable.html">Bad Table</a>
+    </div>
+    
+
 	<div class="limiter">
         
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        
+        <!--
         <div class="container-legend">
             <div class="legend ver0">
                 <table data-vertable="ver0">
@@ -186,6 +207,7 @@
                 </table>
             </div>
         </div>
+-->
         
 		<div class="container-table100">
 			<div class="wrap-table100">
