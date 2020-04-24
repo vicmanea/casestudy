@@ -87,6 +87,34 @@ iframe {
 }
 
 
+/*//////////////////////////////////////////////////////////////////
+[ Table ]*/
+.container-legend {
+    width: 25%;
+    float: left;
+    font-size: 12px;
+    
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px;
+}
+
+.row1 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.column101 {
+    width: 10px;
+    padding-left: 0px;
+}
+
 
 /*//////////////////////////////////////////////////////////////////
 [ Table ]*/
@@ -97,7 +125,7 @@ iframe {
 }
 
 .container-table100 {
-  width: 100%;
+  /*width: 100%;*/
   min-height: 100vh;
   background: #d1d1d1;
 
@@ -110,6 +138,9 @@ iframe {
   justify-content: center;
   flex-wrap: wrap;
   padding: 33px 30px;
+    
+  float: right;
+  width: 75%;
 }
 
 .wrap-table100 {
@@ -147,6 +178,67 @@ th, td {
   padding-top: 18px;
   padding-bottom: 14px;
 }
+
+/*==================================================================
+[ Ver0 ]*/
+.legend.ver0 table {
+    border: 1px solid #808080;    
+}
+
+.legend.ver0 tr {
+    border: 1px solid #808080;
+}
+
+.legend.ver0 th.column101 {
+    border: 1px solid #808080;
+}
+
+.legend.ver0 td.column101 {
+    border: 1px solid #808080;
+}
+
+.legend.ver0 td {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.4;  
+  
+}
+
+.legend.ver0 th {
+  font-family: Montserrat-Medium;
+  font-size: 9px;
+  color: #fff;
+  line-height: 2.0;
+  text-transform: uppercase;
+  background-color: #36304a;
+}
+
+.legend.ver0 .hov-column-ver1 {
+  background-color: #f2f2f2;
+}
+
+.legend.ver0 .hov-column-head-ver1 {
+  background-color: #484848 !important;
+}
+
+.legend.ver0 th.column101.column2 {
+    background-color:darkred;
+}
+
+.legend.ver0 th.column101.column3 {
+    background-color:darkgreen
+}
+
+.legend.ver0 th.column101.column4 {
+    background-color:orange
+        
+}
+
+.legend.ver0 th.column101.column5 {
+    background-color:darkred;
+}
+
 
 
 /*==================================================================
