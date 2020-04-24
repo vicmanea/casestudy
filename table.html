@@ -73,10 +73,10 @@
 				if (res[0] < 90 && res[1] < 60) {
 					$(this).css('background-color',colourLowConcerning);
 				}
-				else if (res[0] < 120 && res[1] < 80) {
+				else if (res[0] < 120 && res[1] <= 80) {
 					$(this).css('background-color',colourNormal);
 				}
-				else if (res[0] <= 129 && res[1] < 80) {
+				else if (res[0] <= 129 && res[1] <= 80) {
 					$(this).css('background-color',colourHighConcerning);
 				}
 				else if (res[0] >= 130 && res[1] >= 80) {
