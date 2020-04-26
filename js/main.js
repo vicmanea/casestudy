@@ -1,7 +1,6 @@
 
 $("#signIn").click(function(){
 
-    alert("The button was clicked!");
 
     var pwInput = document.getElementById("password").value;
     var usernameInput = document.getElementById("usernameInput").value;
